@@ -1,0 +1,117 @@
+=== Run information ===
+
+Scheme:weka.classifiers.meta.FilteredClassifier -F "weka.filters.unsupervised.attribute.AddID -C first -N ID" -W weka.classifiers.trees.J48 -- -C 0.25 -M 2
+Relation:     train_movement
+Instances:    3571
+Attributes:   6
+              time
+              r2
+              x
+              y
+              z
+              movement
+Test mode:user supplied test set: size unknown (reading incrementally)
+
+=== Classifier model (full training set) ===
+
+FilteredClassifier using weka.classifiers.trees.J48 -C 0.25 -M 2 on data filtered through weka.filters.unsupervised.attribute.AddID -C first -N ID
+
+Filtered Header
+@relation train_movement-weka.filters.unsupervised.attribute.AddID-Cfirst-NID
+
+@attribute ID numeric
+@attribute time numeric
+@attribute r2 numeric
+@attribute x numeric
+@attribute y numeric
+@attribute z numeric
+@attribute movement {moving,stopped}
+
+@data
+
+
+Classifier Model
+J48 pruned tree
+------------------
+
+time <= 21: stopped (252.0)
+time > 21
+|   time <= 825
+|   |   time <= 723
+|   |   |   time <= 646
+|   |   |   |   time <= 560.5
+|   |   |   |   |   time <= 101
+|   |   |   |   |   |   ID <= 53: stopped (30.0)
+|   |   |   |   |   |   ID > 53: moving (310.0)
+|   |   |   |   |   time > 101
+|   |   |   |   |   |   time <= 146.5
+|   |   |   |   |   |   |   ID <= 2718
+|   |   |   |   |   |   |   |   ID <= 233: moving (30.0)
+|   |   |   |   |   |   |   |   ID > 233: stopped (345.0)
+|   |   |   |   |   |   |   ID > 2718: moving (37.0)
+|   |   |   |   |   |   time > 146.5
+|   |   |   |   |   |   |   time <= 242.5: moving (384.0)
+|   |   |   |   |   |   |   time > 242.5
+|   |   |   |   |   |   |   |   time <= 293.5
+|   |   |   |   |   |   |   |   |   ID <= 529: moving (43.0)
+|   |   |   |   |   |   |   |   |   ID > 529
+|   |   |   |   |   |   |   |   |   |   ID <= 3016: stopped (384.0)
+|   |   |   |   |   |   |   |   |   |   ID > 3016: moving (33.0)
+|   |   |   |   |   |   |   |   time > 293.5
+|   |   |   |   |   |   |   |   |   ID <= 1864
+|   |   |   |   |   |   |   |   |   |   time <= 429
+|   |   |   |   |   |   |   |   |   |   |   ID <= 847: moving (259.0)
+|   |   |   |   |   |   |   |   |   |   |   ID > 847
+|   |   |   |   |   |   |   |   |   |   |   |   ID <= 1642: stopped (156.0)
+|   |   |   |   |   |   |   |   |   |   |   |   ID > 1642: moving (46.0)
+|   |   |   |   |   |   |   |   |   |   time > 429: moving (262.0)
+|   |   |   |   |   |   |   |   |   ID > 1864
+|   |   |   |   |   |   |   |   |   |   ID <= 3325
+|   |   |   |   |   |   |   |   |   |   |   time <= 398.5: moving (210.0)
+|   |   |   |   |   |   |   |   |   |   |   time > 398.5: stopped (459.0)
+|   |   |   |   |   |   |   |   |   |   ID > 3325: moving (68.0)
+|   |   |   |   time > 560.5: moving (342.0)
+|   |   |   time > 646
+|   |   |   |   ID <= 1206: stopped (270.0)
+|   |   |   |   ID > 1206
+|   |   |   |   |   ID <= 2196: moving (138.0)
+|   |   |   |   |   ID > 2196: stopped (240.0)
+|   |   time > 723
+|   |   |   ID <= 2455: moving (383.0)
+|   |   |   ID > 2455: stopped (24.0)
+|   time > 825
+|   |   ID <= 1564: stopped (270.0)
+|   |   ID > 1564: moving (38.0)
+
+Number of Leaves  : 	25
+
+Size of the tree : 	49
+
+
+Time taken to build model: 0.41 seconds
+
+=== Evaluation on test set ===
+=== Summary ===
+
+Correctly Classified Instances        2829               77.3585 %
+Incorrectly Classified Instances       828               22.6415 %
+Kappa statistic                          0.3972
+Mean absolute error                      0.2264
+Root mean squared error                  0.4758
+Relative absolute error                 45.903  %
+Root relative squared error             96.4321 %
+Total Number of Instances             3657     
+
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.884     0.513      0.817     0.884     0.849      0.686    moving
+                 0.487     0.116      0.619     0.487     0.545      0.686    stopped
+Weighted Avg.    0.774     0.402      0.762     0.774     0.765      0.686
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 2333  305 |    a = moving
+  523  496 |    b = stopped
+

@@ -1,0 +1,189 @@
+=== Run information ===
+
+Scheme:weka.classifiers.meta.FilteredClassifier -F "weka.filters.unsupervised.attribute.AddID -C first -N ID" -W weka.classifiers.trees.J48 -- -C 0.25 -M 2
+Relation:     train_movement
+Instances:    3571
+Attributes:   6
+              time
+              r2
+              x
+              y
+              z
+              movement
+Test mode:user supplied test set: size unknown (reading incrementally)
+
+=== Classifier model (full training set) ===
+
+FilteredClassifier using weka.classifiers.trees.J48 -C 0.25 -M 2 on data filtered through weka.filters.unsupervised.attribute.AddID -C first -N ID
+
+Filtered Header
+@relation train_movement-weka.filters.unsupervised.attribute.AddID-Cfirst-NID
+
+@attribute ID numeric
+@attribute time numeric
+@attribute r2 numeric
+@attribute x numeric
+@attribute y numeric
+@attribute z numeric
+@attribute movement {moving,stopped}
+
+@data
+
+
+Classifier Model
+J48 pruned tree
+------------------
+
+time <= 21: stopped (84.0)
+time > 21
+|   time <= 825
+|   |   time <= 723
+|   |   |   time <= 646
+|   |   |   |   time <= 560.5
+|   |   |   |   |   r2 <= 0.001031
+|   |   |   |   |   |   time <= 527
+|   |   |   |   |   |   |   time <= 432.5
+|   |   |   |   |   |   |   |   time <= 100.5
+|   |   |   |   |   |   |   |   |   ID <= 53: stopped (10.0)
+|   |   |   |   |   |   |   |   |   ID > 53: moving (83.0)
+|   |   |   |   |   |   |   |   time > 100.5
+|   |   |   |   |   |   |   |   |   time <= 146.5
+|   |   |   |   |   |   |   |   |   |   ID <= 234: moving (9.0)
+|   |   |   |   |   |   |   |   |   |   ID > 234
+|   |   |   |   |   |   |   |   |   |   |   ID <= 2715: stopped (67.0)
+|   |   |   |   |   |   |   |   |   |   |   ID > 2715: moving (6.0)
+|   |   |   |   |   |   |   |   |   time > 146.5
+|   |   |   |   |   |   |   |   |   |   time <= 243.5: moving (86.0)
+|   |   |   |   |   |   |   |   |   |   time > 243.5
+|   |   |   |   |   |   |   |   |   |   |   time <= 293.5
+|   |   |   |   |   |   |   |   |   |   |   |   ID <= 529: moving (10.0)
+|   |   |   |   |   |   |   |   |   |   |   |   ID > 529
+|   |   |   |   |   |   |   |   |   |   |   |   |   ID <= 3010: stopped (81.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   ID > 3010: moving (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   time > 293.5
+|   |   |   |   |   |   |   |   |   |   |   |   ID <= 3259
+|   |   |   |   |   |   |   |   |   |   |   |   |   time <= 387.5: moving (95.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   time > 387.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ID <= 849: moving (19.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ID > 849
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ID <= 1648: stopped (31.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ID > 1648: moving (19.0)
+|   |   |   |   |   |   |   |   |   |   |   |   ID > 3259: stopped (21.0)
+|   |   |   |   |   |   |   time > 432.5
+|   |   |   |   |   |   |   |   z <= 0.016533: moving (57.0)
+|   |   |   |   |   |   |   |   z > 0.016533: stopped (3.0/1.0)
+|   |   |   |   |   |   time > 527
+|   |   |   |   |   |   |   ID <= 1413: moving (13.0)
+|   |   |   |   |   |   |   ID > 1413: stopped (50.0)
+|   |   |   |   |   r2 > 0.001031
+|   |   |   |   |   |   ID <= 1864
+|   |   |   |   |   |   |   time <= 428
+|   |   |   |   |   |   |   |   ID <= 847
+|   |   |   |   |   |   |   |   |   ID <= 575
+|   |   |   |   |   |   |   |   |   |   ID <= 231: moving (134.0)
+|   |   |   |   |   |   |   |   |   |   ID > 231
+|   |   |   |   |   |   |   |   |   |   |   ID <= 297
+|   |   |   |   |   |   |   |   |   |   |   |   ID <= 275: stopped (9.0)
+|   |   |   |   |   |   |   |   |   |   |   |   ID > 275: moving (2.0)
+|   |   |   |   |   |   |   |   |   |   |   ID > 297
+|   |   |   |   |   |   |   |   |   |   |   |   ID <= 522: moving (181.0)
+|   |   |   |   |   |   |   |   |   |   |   |   ID > 522
+|   |   |   |   |   |   |   |   |   |   |   |   |   ID <= 530: moving (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   ID > 530: stopped (5.0)
+|   |   |   |   |   |   |   |   |   ID > 575: moving (195.0)
+|   |   |   |   |   |   |   |   ID > 847
+|   |   |   |   |   |   |   |   |   ID <= 1642: stopped (21.0)
+|   |   |   |   |   |   |   |   |   ID > 1642: moving (29.0)
+|   |   |   |   |   |   |   time > 428: moving (206.0)
+|   |   |   |   |   |   ID > 1864
+|   |   |   |   |   |   |   ID <= 2226: stopped (35.0)
+|   |   |   |   |   |   |   ID > 2226
+|   |   |   |   |   |   |   |   ID <= 2664: moving (114.0)
+|   |   |   |   |   |   |   |   ID > 2664
+|   |   |   |   |   |   |   |   |   ID <= 2718: stopped (39.0)
+|   |   |   |   |   |   |   |   |   ID > 2718
+|   |   |   |   |   |   |   |   |   |   ID <= 2947: moving (174.0)
+|   |   |   |   |   |   |   |   |   |   ID > 2947
+|   |   |   |   |   |   |   |   |   |   |   ID <= 3016: stopped (41.0)
+|   |   |   |   |   |   |   |   |   |   |   ID > 3016
+|   |   |   |   |   |   |   |   |   |   |   |   ID <= 3259: moving (185.0)
+|   |   |   |   |   |   |   |   |   |   |   |   ID > 3259
+|   |   |   |   |   |   |   |   |   |   |   |   |   ID <= 3325: stopped (45.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   ID > 3325: moving (55.0)
+|   |   |   |   time > 560.5: moving (342.0)
+|   |   |   time > 646
+|   |   |   |   ID <= 1206: stopped (90.0)
+|   |   |   |   ID > 1206
+|   |   |   |   |   ID <= 2196: moving (138.0)
+|   |   |   |   |   ID > 2196: stopped (80.0)
+|   |   time > 723
+|   |   |   ID <= 2443: moving (371.0)
+|   |   |   ID > 2443
+|   |   |   |   ID <= 2455: moving (12.0)
+|   |   |   |   ID > 2455: stopped (8.0)
+|   time > 825
+|   |   ID <= 1564: stopped (90.0)
+|   |   ID > 1564: moving (38.0)
+
+Number of Leaves  : 	46
+
+Size of the tree : 	91
+
+
+Time taken to build model: 0.13 seconds
+
+=== Evaluation on test set ===
+=== Summary ===
+
+Correctly Classified Instances        2709               74.0771 %
+Incorrectly Classified Instances       948               25.9229 %
+Kappa statistic                          0.3413
+Mean absolute error                      0.2592
+Root mean squared error                  0.5057
+Relative absolute error                 67.4374 %
+Root relative squared error            112.3546 %
+Total Number of Instances             3657     
+
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.834     0.5        0.812     0.834     0.823      0.678    moving
+                 0.5       0.166      0.537     0.5       0.518      0.678    stopped
+Weighted Avg.    0.741     0.407      0.736     0.741     0.738      0.678
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 2199  439 |    a = moving
+  509  510 |    b = stopped
+
+
+=== Re-evaluation on test set ===
+
+User supplied test set
+Relation:     train_movement
+Instances:     unknown (yet). Reading incrementally
+Attributes:   6
+
+=== Summary ===
+
+Correctly Classified Instances        2709               74.0771 %
+Incorrectly Classified Instances       948               25.9229 %
+Kappa statistic                          0.3413
+Mean absolute error                      0.2592
+Root mean squared error                  0.5057
+Total Number of Instances             3657     
+
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.834     0.5        0.812     0.834     0.823      0.678    moving
+                 0.5       0.166      0.537     0.5       0.518      0.678    stopped
+Weighted Avg.    0.741     0.407      0.736     0.741     0.738      0.678
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 2199  439 |    a = moving
+  509  510 |    b = stopped
+
